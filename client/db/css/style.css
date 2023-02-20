@@ -1,0 +1,351 @@
+ @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --bg1: #151828;
+    --bg2: #1B1F34;
+    --body: #959DCC;
+    --brand: #FFAB76;
+    --white: #fff;
+}
+
+body{
+    font-family: "Inter",'Sega UI',Tahoma,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--body);
+    line-height: 1.8;
+    background-color: var(--bg1);
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family:"Dela Guthic One",'Segoe UI',Tahoma,Geneva,Verdana,sans-serif ;
+    color: #fff;
+}
+
+a{
+    color: var(--body);
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+a:hover{
+   color: var(--brand);
+}
+
+.link-more{
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    left: 1px;
+}
+
+.link-more .icon{
+    transition: all 0.4s ease;
+}
+
+.link-more:hover .icon{
+    transform: translateX(8px);
+}
+
+section {
+    padding-top: 160px;
+    /*padding-bottom: 160px;*/
+}
+
+/* INTRO */
+
+.intro{
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.intro h1{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.intro h6{
+    color:var(--brand);
+}
+
+.intro p{
+    max-width: 5000px;
+    margin: auto;
+}
+
+.cta-btns{
+    margin-top: 60px; ;
+}
+
+/*NAVBAR*/
+.navbar {
+background: linear-gradient(to bottom, #181F34, rgb(27, 31, 52, 0.2));
+}
+
+.navbar .navbar-nav .nav-link.active{
+    color: var(--brand);
+}
+
+.navbar-brand{
+    font-family: "Dela Guthic One",'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+     font-size: 32px;
+}
+
+/*HERO*/
+#hero{
+    background:linear-gradient(#181F34, rgb(27, 31, 52, 0.0)), url(../img/home.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+#hero p{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+/*BTN*/
+.btn{
+    padding:16px 36px;
+    font-family: "Dela Guthic One",'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    transition: all 0.4s ease;
+    border-radius: 0;
+}
+
+.btn-brand{
+    background-color:var(--brand) ;
+}
+
+.btn-brand:hover{
+    background-color: transparent;
+    color: var(--brand);
+    border: var(--brand);
+}
+
+.btn-outline-brand{
+    background-color: transparent;
+    color: var(--brand);
+    border-color: var(--brand);
+}
+
+.btn-outline-brand:hover{
+
+    background-color: var(--brand);
+}
+.cta-btns{
+    text-align: center;
+}
+
+/*ABOUT*/
+#about{
+   position: relative;
+}
+
+#about::after{
+    content: "";
+    width: 25%;
+    height: 100%;
+    background-color: var(--brand);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#about h6{
+     color: var(--brand);
+}
+
+
+#about h1{
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+/* SERVICE */
+#services{
+    background: var(--bg2);
+}
+
+#services .service .content{
+    padding: 32px;
+}
+
+#services .service p{
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+/* FEATURES */
+#features{
+    background-color:var(--bg2) ;
+}
+.features {
+    display: flex;
+}
+
+.features .icon-features{
+    font-size: 36px;
+    color: var(--brand);
+    line-height: 1;
+    margin-right: 16px;
+}
+
+.features p{
+    text-align:left;
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+ /*Social icons*/
+
+ .social-links a{
+    width: 48px;
+    height: 48px;
+    background-color: var(--bg2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .social-links a:hover{
+    background-color: var(--brand);
+    color: var(--bg2);
+ }
+
+/*MASTERS*/
+#masters{
+
+    background-color: var(--bg2);
+}
+
+.masters-member{
+    margin: 40px;
+    padding: 0;
+    position: relative;
+}
+
+.masters-member .social-links{
+    position: absolute;
+    top: 0px ;
+    left: 30px;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.masters-member:hover .social-links{
+    opacity: 1;
+    top:30px ;
+}
+
+/*BOOKING*/
+#booking{
+    background: linear-gradient(to right,rgba(27, 31, 52,0.8), rgba(27, 31, 52, 0.8)), url(../css/img/booking.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#booking form{
+    background-color: var(--bg1);
+    padding: 40px;
+}
+
+#booking form .form-control{
+   background-color: var(--bg2);
+   border-radius: 0;
+   margin-top: 16px;
+   border-color: var(--bg2);
+   border: 2px solid var(--bg2);
+   color:var(--body) ;
+}
+
+#booking form input{
+    height: 58px;
+}
+
+#booking form input:focus{
+    box-shadow: none;
+    border-left-color: var(--brand);
+}
+
+/*FOOTER*/
+footer{
+    padding-top: 160px;
+}
+
+footer .social-links{
+    display: flex;
+}
+
+footer .social-links a{
+    margin-right: 5px;
+}
+
+.footer-bottom{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top:1px solid var(--body) ;
+}
+
+/*SELECT*/
+
+.custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  /* .custom-select select {
+    display: none; 
+  } */
+  
+  .select-selected {
+    background-color: DodgerBlue;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  /*ADMINKA*/
