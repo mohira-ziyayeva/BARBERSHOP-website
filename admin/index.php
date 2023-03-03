@@ -1,7 +1,7 @@
 <?php
 
 require_once('../db/database.php');
-$sql = "SELECT * FROM barbershop.order o join barbershop.master m on o.master_id = m.id";
+$sql = "SELECT o.*, m.name FROM barbershop.order o join barbershop.master m on o.master_id = m.id";
 $db = new Database();
 $data = $db->customSelect($sql);
 

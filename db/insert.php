@@ -2,7 +2,7 @@
 
 require_once('database.php');
 
-$tbl = "order";
+$tbl = "barbershop.order";
 $db = new Database();
 
 $array = array(
@@ -14,6 +14,8 @@ $array = array(
     "comment" => $_POST["comment"]
 );
 
+// print_r($array);
+
 $db->insert($tbl, $array);
 
-header("location:../client/index.php");
+//header("location:../client/index.php");

@@ -364,7 +364,7 @@
             </div>
             </div>
             <div class="for-group col-12">
-              <input name="for_date" type="datatime-local" class="form-control" placeholder="ДАТА И ВРЕМЯ ____-__-__   __:__:__">
+              <input id="for_date" name="for_date" type="text" class="form-control" placeholder="ДАТА И ВРЕМЯ">
             </div>
             <div class="for-group col-12">
               <input name="client_name" type="text" class="form-control" placeholder="ИМЯ ИЛИ ФАМИЛИЯ">

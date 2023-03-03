@@ -16,7 +16,7 @@ class Database
             $this->conn = new PDO("mysql:host=$this->hostname;dbname=$this->dbname", $this->username, $this->password);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
-            echo 'Error: ' . $e->getMessage();
+            var_dump('Error: ' . $e->getMessage());
         }
     }
 
@@ -28,7 +28,7 @@ class Database
             $rows = $stmt->fetchAll(); // assuming $result == true
             return $rows;
         } catch (PDOException $e) {
-            echo 'Error: ' . $e->getMessage();
+            var_dump('Error: ' . $e->getMessage());
         }
     }
 
@@ -50,7 +50,7 @@ class Database
             }
 
         } catch (PDOException $e) {
-            echo 'Error: ' . $e->getMessage();
+            var_dump('Error: ' . $e->getMessage());
         }
 
         return [];
@@ -73,7 +73,7 @@ class Database
             $stmt->execute();
             return $stmt->rowCount(); // 1
         } catch (PDOException $e) {
-            return 'Error: ' . $e->getMessage();
+            var_dump('Error: ' . $e->getMessage());
         }
     }
 
@@ -87,6 +87,8 @@ class Database
         $sql .= implode("', '", $val);
         $sql .= "')";
 
+        var_dump($sql);
+
         $sql1 = "SELECT MAX( id ) FROM  `$tbl`";
         try {
 
@@ -97,7 +99,7 @@ class Database
             $rows = $stmt2->fetchAll(); // assuming $result == true
             return $rows[0][0];
         } catch (PDOException $e) {
-            return 'Error: ' . $e->getMessage();
+            var_dump('Error: ' . $e->getMessage());
         }
     }
 
@@ -116,7 +118,7 @@ class Database
             $stmt->execute();
             return $stmt->rowCount(); // 1
         } catch (PDOException $e) {
-            return 'Error: ' . $e->getMessage();
+            var_dump('Error: ' . $e->getMessage());
         }
     }
 }
